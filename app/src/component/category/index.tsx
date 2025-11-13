@@ -3,13 +3,13 @@ import { MaterialIcons } from '@expo/vector-icons'
 import { styles } from './styles'
 import { colors } from '@/styles/colors'
 
-//props == pripriedades
+//props associase com pripriedades
 type Props = PressableProps &{
     name: string;
     icon: keyof typeof MaterialIcons.glyphMap;
     isSelected: boolean;
 }
-
+//Por padrão componentes não sao exporado como default
 export function Category({name,icon,isSelected,...rest}:Props){
     const color = isSelected ? colors.green[300] : colors.gray[400];
     return(
